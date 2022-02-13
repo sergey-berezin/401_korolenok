@@ -1,0 +1,26 @@
+﻿<Window x:Class="RecognitionApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecognitionApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+                <Menu Name="Menu" Margin="10,10,10,10">
+                <MenuItem Header="Open" Name="Open" Click="Choose_Folder"/>
+                <MenuItem Header="Start" Name="Start" Click="StartRecognition"/>
+                <MenuItem Header="Stop" Name="Stop" Click="CancelRecognition"/>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock Margin="20,10,670,355" Text="Detected objects:" FontWeight="Bold"/>
+                <ListBox Margin="20,30,20,25" Name="Images_listBox" />
+        </Grid>
+    </Grid>
+</Window>
